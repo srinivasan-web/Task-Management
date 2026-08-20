@@ -1,0 +1,1 @@
+const key='accessToken'; export const session={ token:()=>typeof window==='undefined'?null:sessionStorage.getItem(key), set:(token:string)=>sessionStorage.setItem(key,token), clear:()=>sessionStorage.removeItem(key) };

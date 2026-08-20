@@ -1,0 +1,3 @@
+type Props = { total: number; pending: number; inProgress: number; completed: number; high: number; overdue: number };
+export function TaskMetrics({ total, pending, inProgress, completed, high, overdue }: Props) { return <section className="stats stats-six"><Metric label="Total tasks" value={total}/><Metric label="Pending" value={pending}/><Metric label="In progress" value={inProgress}/><Metric label="Completed" value={completed}/><Metric label="High priority" value={high}/><Metric label="Overdue" value={overdue}/></section>; }
+function Metric({ label, value }: { label: string; value: number }) { return <div><span>{label}</span><strong>{value}</strong></div>; }

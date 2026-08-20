@@ -1,0 +1,29 @@
+[31m[Nest] 12616  - [39m19/08/2026, 11:18:42 pm [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::4000[39m[38;5;3m +10ms[39m
+node:net:1940
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at ExpressAdapter.listen (E:\Task-Management\node_modules\@nestjs\platform-express\adapters\express-adapter.js:115:32)
+    at E:\Task-Management\node_modules\@nestjs\core\nest-application.js:190:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (E:\Task-Management\node_modules\@nestjs\core\nest-application.js:180:16)
+    at async bootstrap (E:\Task-Management\backend\dist\main.js:7:410) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.12.0
+npm error Lifecycle script `start` failed with error:
+npm error code 1
+npm error path E:\Task-Management\backend
+npm error workspace task-management-api@1.0.0
+npm error location E:\Task-Management\backend
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c node dist/main

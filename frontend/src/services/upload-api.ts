@@ -1,0 +1,1 @@
+import { api } from './api'; export const uploadApi={ attachment:(taskId:string,file:File)=>{const form=new FormData();form.append('file',file);return api(`/tasks/${taskId}/attachments`,{method:'POST',body:form})} };

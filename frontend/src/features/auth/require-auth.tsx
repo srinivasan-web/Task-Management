@@ -1,0 +1,1 @@
+'use client'; import { useEffect } from 'react'; import { useRouter } from 'next/navigation'; import { session } from './session'; export function RequireAuth({children}:{children:React.ReactNode}){const router=useRouter();useEffect(()=>{if(!session.token())router.replace('/login')},[router]);if(!session.token())return null;return <>{children}</>}
